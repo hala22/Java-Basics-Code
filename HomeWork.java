@@ -25,7 +25,7 @@ public class HomeWork {
 
 
 
-// 较好的插入排序
+// 较好的插入排序 升序
 // 因为只要是从左到右行进排序，所以其左边的是排好的，这样就只需就近原则比较就可以了
 	public static void INSERTION_SORT_MIN(int[] num){
 
@@ -43,6 +43,7 @@ public class HomeWork {
 		}
 	}
 
+//	插入排序 降序
 	public static void INSERTION_SORT_MAX(int[] num){
 		int key;
 		int j;
@@ -60,6 +61,25 @@ public class HomeWork {
 		}
 	}
 	
+//	选择排序
+	
+	public static void SELECT_SORT(int[] num){
+		int key;
+		int location;
+		for(int i=0;i<num.length-1;i++){
+			key=num[i];
+			location=i;
+			for(int j=i+1;j<num.length;j++){
+				if(num[j]<key){
+					key=num[j];
+					location=j;
+				}
+			}
+			num[location]=num[i];
+			num[i]=key;
+		}
+	}
+	
 	public static void main(String[] args){
 		Scanner in=new Scanner(System.in);
 		System.out.println("输入数字个数?");
@@ -71,11 +91,14 @@ public class HomeWork {
 			num[i]=in.nextInt();
 		}
 		
-		INSERTION_SORT_MAX(num);
+		SELECT_SORT(num);
 		
 		for(int j:num){
 			System.out.print(j+" ");
 		}
+		
 		   
-		}
+	}
+	
+	
 }
