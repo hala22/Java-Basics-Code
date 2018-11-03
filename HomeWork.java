@@ -80,6 +80,20 @@ public class HomeWork {
 		}
 	}
 	
+//	冒泡排序
+	public static void BUBBLE_SORT(int[] num){
+		for(int i=num.length-1;i>=1;i--){
+			for(int j=0;j<i;j++){
+				
+				if(num[j]>num[j+1]){
+					int temp=num[j];
+					num[j]=num[j+1];
+					num[j+1]=temp;
+				}
+			}
+		}
+	}
+
 	public static void main(String[] args){
 		Scanner in=new Scanner(System.in);
 		System.out.println("输入数字个数?");
@@ -91,7 +105,7 @@ public class HomeWork {
 			num[i]=in.nextInt();
 		}
 		
-		SELECT_SORT(num);
+		BUBBLE_SORT(num);
 		
 		for(int j:num){
 			System.out.print(j+" ");
