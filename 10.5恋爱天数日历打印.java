@@ -13,7 +13,7 @@ public class test {
 		int tDay=calendar.get(Calendar.DAY_OF_MONTH);
 		long end1=calendar.getTimeInMillis();
 		
-		calendar.set(2018,8,29);
+		calendar.set(2018,8,28);
 		int LYear=calendar.get(Calendar.YEAR);
 		int LMonth=calendar.get(Calendar.MONTH)+1;
 		int LDay=calendar.get(Calendar.DAY_OF_MONTH);
@@ -27,8 +27,7 @@ public class test {
 			System.out.print(" \t");
 		}
 		
-		//这里加2是因为，一是尾减首加一，二是它是指当天零点，所以相当于前一天要加一
-		long LoveDays1=(end1-start)/(1000*3600*24)+2;
+		long LoveDays1=(end1-start)/(1000*3600*24)+1;
 		
 		for(int i=0;i<days;i++) {
 			if(year==tYear&&month==tMonth&&i==(tDay-1))
