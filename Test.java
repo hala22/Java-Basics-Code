@@ -21,6 +21,10 @@ public class Test {
 				}
 			}
 		}
+
+		if(result==""){
+			System.out.println("没有共同子串！");
+		}
 	}
 	
 
