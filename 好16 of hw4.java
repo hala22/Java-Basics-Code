@@ -3,6 +3,23 @@ package HomeWork;
 import java.util.Scanner;
 
 public class HomeWork {
+
+	//写法二
+
+	public static void Zhi(int num) {
+		System.out.print(num+"=");
+		int flag=num;
+		for(int i=2;i<=num/2;i++) {
+			if(flag%i==0) {
+				flag/=i;
+				if(flag==1)
+					System.out.print(i);
+				else 
+					System.out.print(i+"*");
+				i--;
+			}
+		}
+	}
 	
 
 	public static void main(String[] args) {
